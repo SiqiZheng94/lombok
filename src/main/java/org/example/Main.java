@@ -8,7 +8,7 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
         //traditional-student
-        Student student1 = new Student("000","Example","Lee","Hamburg",13);
+        Student student1 = new Student("000","Example","Lee","Hamburg",6);
         System.out.println(student1);
         //Lombok-student-class
         Student student2 = Student.builder()
@@ -53,5 +53,9 @@ public class Main {
         UniversityService universityService = new UniversityService();
         System.out.println("average of course1: "+universityService.averageGradeOfACourse(course1));
         System.out.println("average of course2: "+universityService.averageGradeOfACourse(course2));
+
+        University university = new University("NRW...","High School",List.of(course1,course2,course3));
+        System.out.println("average of university: "+universityService.averageGradeOfUniversity(university));
+        System.out.println("Students with good grade: "+universityService.goodStudents(university));
     }
 }
