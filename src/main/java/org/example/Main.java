@@ -38,7 +38,7 @@ public class Main {
                 .teachers(List.of(teacher1,teacher2))
                 .students(List.of(student1,student2))
                 .build();
-        Course course2 = new Course("222","JAVA",List.of(teacher1, teacher2),List.of(student1,student2));
+        Course course2 = new Course("222","JAVA",List.of(teacher1, teacher2),List.of(student1,student2,student3));
         System.out.println("course1 is : "+course1);
         System.out.println("course2 is : "+course2);
         //traditional Setter to change the ID of course1
@@ -48,5 +48,10 @@ public class Main {
         //@With build another course(course2) with a different ID
         Course course3 = course1.withId("333").withName("WEB");
         System.out.println("course3 is : "+course3);
+
+
+        UniversityService universityService = new UniversityService();
+        System.out.println("average of course1: "+universityService.averageGradeOfACourse(course1));
+        System.out.println("average of course2: "+universityService.averageGradeOfACourse(course2));
     }
 }

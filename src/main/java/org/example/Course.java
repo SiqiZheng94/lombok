@@ -22,11 +22,13 @@ public class Course {
 
     //private List <Student> students = new ArrayList<>();
 
-
+/*
     public Course(String id, String name, List<Teacher> teachers, List<Student> students) {
         this.id = id;
         this.name = name;
         this.teachers = teachers;
         this.students = students;
     }
+
+ */
 }
