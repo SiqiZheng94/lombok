@@ -10,6 +10,5 @@ import java.util.List;
 
 @Builder
 @With
-@Value
 public record University(String id, String name, List<Course> courseList) {
 }
